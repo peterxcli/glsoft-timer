@@ -6,6 +6,7 @@ import { useState } from 'react'
 import {themes} from '../themes'
 import Timer from '@/components/timer/Timer'
 import styles from './index.module.scss'
+import Trigger from '@/components/trigger/Trigger'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function Home() {
       </Head>
       {/* <main> */}
         <Timer />
+        {/* <Trigger/> */}
       {/* </main> */}
     </div>
   )

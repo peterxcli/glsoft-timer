@@ -1,22 +1,18 @@
-//a button that triggers a function
-//props: text, function
-//state: none
-//dependencies: react, react-dom, react-router-dom, react-scripts
-// Path: src\components\trigger\Trigger.tsx
-// Compare this snippet from src\components\timer\Timer.tsx:
-import React, { useState, useEffect } from 'react';
-import { useAppStore } from "../../store/store"
+import React, { useState } from 'react';
 import styles from './trigger.module.scss';
 
-const Trigger: React.FC<{ text: string }> = ({ text }) => {
-    const { toggleIdle } = useAppStore()
-    const toggleTrigger = () => {
-        toggleIdle()
-    }
+const Trigger: React.FC = () => {
+    const [isUp, setIsUp] = useState(true);
+
+    const handleClick = () => {
+        setIsUp(!isUp);
+    };
+
     return (
-        <button className={styles.trigger} onClick={toggleTrigger}>
-            {text}
-        </button>
+        <div
+            className={`${styles.arrow} ${isUp ? styles.up : styles.down}`}
+            onClick={handleClick}
+        ></div>
     );
 };
 

@@ -1,0 +1,38 @@
+.clock {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    z-index: 1;
+
+    .clock-icon {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .clock-icon-hour {
+            width: 10%;
+            height: 40%;
+            background-color: rgb(255, 85, 0);
+            z-index: 2;
+            border-radius: 10px;
+            transform: translate(0%, -40%);
+        }
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -7,6 +7,8 @@ import {themes} from '../themes'
 import Timer from '@/components/timer/Timer'
 import styles from './index.module.scss'
 import Trigger from '@/components/trigger/Trigger'
+import Reset from '@/components/reset/Reset'
+import Clock from '@/components/clock/Clock'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +25,9 @@ export default function Home() {
       </Head>
       {/* <main> */}
         <Timer />
-        {/* <Trigger/> */}
+        <Clock/>
+        <Reset/>
+        <Trigger/>
       {/* </main> */}
     </div>
   )

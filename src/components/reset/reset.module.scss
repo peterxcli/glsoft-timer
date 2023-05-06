@@ -1,0 +1,15 @@
+.cross {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    z-index: 1;
+
+    .cross-icon {
+        width: 100%;
+        height: 100%;
+        filter: invert(100%);
+    }
+}

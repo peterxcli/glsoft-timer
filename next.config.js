@@ -2,7 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   // output: "export",
-  basePath: "/glsoft-timer"
+  basePath: "/glsoft-timer",
+  "images": {
+    unoptimized: true,
+  },
   // distDir: 'dist',
 }
 

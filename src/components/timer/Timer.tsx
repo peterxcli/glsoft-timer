@@ -16,7 +16,7 @@ const BigTimer: React.FC = () => {
         memo = memo ?? my;
         const deltaY = my - memo;
         console.log(deltaY)
-        incrementTime(Math.ceil(-deltaY) * 1000 / timeUnit)
+        incrementTime(Math.ceil(-deltaY) * 1000)
         if (time == 0) setCountDown(false)
         return my;
     }, )

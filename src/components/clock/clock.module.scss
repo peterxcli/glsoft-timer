@@ -6,6 +6,7 @@
     left: 100px;
     top: 100px;
     z-index: 1;
+    pointer-events: none;
 
     .clock-icon {
         width: 100%;

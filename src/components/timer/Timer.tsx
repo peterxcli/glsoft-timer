@@ -15,21 +15,23 @@ const BigTimer: React.FC = () => {
         console.log(down, last, my, memo)
         memo = memo ?? my;
         const deltaY = my - memo;
-        console.log(deltaY)
         incrementTime(Math.ceil(-deltaY) * 1000)
-        if (time == 0) setCountDown(false)
+        if (time == 0) {
+            setCountDown(deltaY < 0)
+        }
         return my;
     }, )
 
     useEffect(() => {
+        if (time == 0 || idle) return
         const timer = setInterval(() => {
-            if (!idle) incrementTime(countDown ? -timeUnit : timeUnit)
+            incrementTime(countDown ? -timeUnit : timeUnit)
         }, timeUnit);
 
         return () => {
             clearInterval(timer);
         };
-    }, [idle, countDown, incrementTime, timeUnit]);
+    }, [time, idle, countDown, incrementTime, timeUnit]);
 
     const getTimeString = (time: number) => {
         // return new Date(time).toISOString().substring(11, 19)

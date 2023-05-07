@@ -6,7 +6,7 @@
     left: 100px;
     top: 100px;
     z-index: 1;
-    pointer-events: none;
+    // pointer-events: none;
 
     .clock-icon {
         width: 100%;
@@ -35,5 +35,36 @@
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .clock {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .clock {
+        left: 50px;
+        top: 50px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .clock {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-height: 576px) {
+    .clock {
+        top: 10px;
+        left: 10px;
+        width: 70px;
+        height: 70px;
     }
 }

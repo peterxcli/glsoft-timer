@@ -1,10 +1,11 @@
 import { create } from 'zustand'
-// import { CartSlice, createCartSlice } from './slices/createCartSlice'
+import { devtools } from 'zustand/middleware'
 import { TimeSlice, createTimeSlice } from './slices/createTimeSlice'
-// import { createProductSlice, ProductSlice } from './slices/createProductSlice'
+import { createSettingSlice, SettingSlice } from './slices/createSettingSlice'
 
-type StoreState = TimeSlice
+type StoreState = TimeSlice & SettingSlice
 
-export const useAppStore = create<StoreState>()((...a) => ({
+export const useAppStore = create<StoreState>()(devtools((...a) => ({
     ...createTimeSlice(...a),
-}))
+    ...createSettingSlice(...a),
+})))

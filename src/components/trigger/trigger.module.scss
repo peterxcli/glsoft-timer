@@ -25,3 +25,32 @@
     }
 }
 
+@media screen and (max-width: 1120px) {
+    .arrow {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .arrow {
+        right: 50px;
+        bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .arrow {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-height: 576px) {
+    .arrow {
+        right: 10px;
+        bottom: 10px;
+        width: 70px;
+        height: 70px;
+    }
+}

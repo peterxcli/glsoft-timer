@@ -1,27 +1,27 @@
 import React, { useState } from 'react';
 import styles from './reset.module.scss';
 import Image from 'next/image';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { useAppStore } from '@/store/store';
 
 const Reset: React.FC = () => {
-    const { reset } = useAppStore()
+    const { resetTimer } = useAppStore()
 
     const handleClick = (e: React.MouseEvent) => {
         e.stopPropagation();
-        reset()
+        resetTimer()
     };
 
     return (
-        <div className={`${styles.cross}`} >
+        <div className={`${styles.cross}`} onClick={handleClick} >
             <Image
                 className={`${styles['cross-icon']}` }
-                onClick={handleClick}
                 src="/glsoft-timer/cross-icon.png"
                 alt='arrow'
                 fill
+                priority
+                placeholder="blur"
+                blurDataURL="/glsoft-timer/cross-icon.png"
             />
-            {/* <ArrowDownwardIcon className={`arrow-icon ${isUp ? styles.up : styles.down}`} /> */}
         </div>
     );
 };

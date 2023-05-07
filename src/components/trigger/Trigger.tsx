@@ -25,6 +25,9 @@ const Trigger: React.FC = () => {
                 src="/glsoft-timer/arrow-icon.png"
                 alt='arrow'
                 fill
+                priority
+                placeholder="blur"
+                blurDataURL="/glsoft-timer/arrow-icon.png"
             />
             {/* <ArrowDownwardIcon className={`arrow-icon ${isUp ? styles.up : styles.down}`} /> */}
         </div>

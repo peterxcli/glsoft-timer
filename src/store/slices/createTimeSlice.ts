@@ -11,18 +11,18 @@ export interface TimeSlice {
     toggleCountDown: () => void;
     toggleIdle: () => void;
     setCountDown: (countDown: boolean) => void;
-    reset: () => void;
+    resetTimer: () => void;
 }
 
 export const createTimeSlice: StateCreator<TimeSlice> = (set) => ({
     time: 0,
     idle: true,
     countDown: false,
-    timeUnit: 20,
+    timeUnit: 1000,
     setTime: (time: number) => set({ time: time }),
     incrementTime: (delta: number) => set((state) => ({ time: Math.max(state.time + delta, 0) })),
     toggleCountDown: () => set((state) => ({ countDown: !state.countDown })),
     toggleIdle: () => set((state) => ({ idle: !state.idle })),
     setCountDown: (countDown: boolean) => set({ countDown }),
-    reset: () => set({ time: 0, idle: true, countDown: false })
+    resetTimer: () => set({ time: 0, idle: true, countDown: false })
 })

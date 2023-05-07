@@ -1,0 +1,83 @@
+.setting {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+    z-index: 1;
+
+    .setting-icon {
+        position: relative; /* make sure the children are positioned relative to this container */
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: rgb(255, 85, 0);
+        // border: 1rem white solid;
+        box-shadow: inset 0px 0px 0px 1rem white;
+
+        .setting-icon-pillar {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 10%;
+            height: 35%;
+            background-color: white;
+            z-index: 2;
+            border-radius: 10px;
+            transform: translate(-50%, 0%); /* move the pillar down by 70% of its own height */
+        }
+
+        .setting-icon-point {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            width: 10%;
+            height: 10%;
+            background-color: white;
+            z-index: 2;
+            border-radius: 50%;
+            transform: translate(-50%, -50%); /* center the point within the container */
+        }
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .setting {
+        width: 150px;
+        height: 150px;
+        .setting-icon {
+            box-shadow: inset 0px 0px 0px 0.7rem white;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .setting {
+        left: 50px;
+        bottom: 50px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .setting {
+        width: 100px;
+        height: 100px;
+        .setting-icon {
+            box-shadow: inset 0px 0px 0px 0.5rem white;
+        }
+    }
+}
+
+@media screen and (max-height: 576px) {
+    .setting {
+        bottom: 10px;
+        left: 10px;
+        width: 70px;
+        height: 70px;
+        .setting-icon {
+            box-shadow: inset 0px 0px 0px 0.4rem white;
+        }
+    }
+}

@@ -25,7 +25,7 @@ const BigTimer: React.FC = () => {
     useEffect(() => {
         if (time == 0) {
             setCountDown(false)
-            if (idle) toggleIdle();
+            if (!idle) toggleIdle();
         }
         if (time == 0 || idle) return
         const timer = setInterval(() => {

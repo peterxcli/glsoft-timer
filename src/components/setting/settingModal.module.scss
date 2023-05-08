@@ -70,19 +70,29 @@
                 display: flex;
                 flex-direction: column;
                 background-color: gray;
-                // margin-bottom: 10rem;
-
+                margin-bottom: 8rem;
 
                 .list-item {
-                    border-top: 0.1px solid #fff;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-top: 0.1px solid #ffffff5e;
+                    
                     font-size: 12px;
                     padding: 20px;
                     // height: 200px;
                     color: white;
+
+                    .check {
+                        color: #009dff;
+                        width: 0.8rem
+                    }
                 }
 
                 .last {
-                    padding-bottom: 5rem;
+                    border-bottom: 0.1px solid #ffffff5e;
+                    // padding-bottom: 20rem;
+                    // bottom: 20rem;
                 }
             }
         }
@@ -92,9 +102,6 @@
 @media screen and (min-height: 900px) {
     .popup {
         .content {
-            // display: flex;
-            // flex-direction: column;
-            // justify-content: space-between;
             .header {
                 .close-button {
                     font-size: 8rem;
@@ -113,9 +120,13 @@
                 }
 
                 .list {
+                    margin-bottom: 20rem;
                     .list-item {
                         padding: 10rem;
                         font-size: 6rem;
+                        .check {
+                            width: 6rem
+                        }
                     }
                 }
             }
@@ -145,6 +156,9 @@
                     .list-item {
                         padding: 5rem;
                         font-size: 2rem;
+                        .check {
+                            width: 2rem
+                        }
                     }
                 }
             }
@@ -174,6 +188,9 @@
                     .list-item {
                         padding: 4rem;
                         font-size: 2rem;
+                        .check {
+                            width: 2rem
+                        }
                     }
                 }
             }

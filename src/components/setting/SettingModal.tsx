@@ -1,18 +1,20 @@
 import React from 'react';
 import { useAppStore } from '@/store/store';
-import styles from './SettingModal.module.scss';
+import styles from './settingModal.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 
 const SettingModal: React.FC = () => {
-    const { countDown, idle, time, isOpen, toggleIsOpen, audios, setAudioIndex } = useAppStore();
+    const { countDown, idle, time, isOpen, toggleIsOpen, audios, setAudioIndex, audioIndex } = useAppStore();
 
     const togglePopup = (e: React.MouseEvent) => {
         e.stopPropagation();
+        e.preventDefault();
         toggleIsOpen();
     };
 
-    const handleClick = (index: number) => {
-        // e.stopPropagation();
-        // toggleIsOpen();
+    const handleClick = (e: React.MouseEvent, index: number) => {
+        e.stopPropagation();
         setAudioIndex(index)
     };
 
@@ -32,9 +34,14 @@ const SettingModal: React.FC = () => {
                             {
                                 audios.map((audio, index) => {
                                     return (
-                                        <div className={`${styles['list-item']} ${index == audios.length-1 ? styles.last : ""}`} key={index} onClick={() => handleClick(index)}>
-                                            {audio.title}
-                                        </div>
+                                        <>
+                                            <div className={`${styles['list-item']} ${index == audios.length - 1 ? styles.last : ""}`} key={index} onClick={(event: React.MouseEvent) => handleClick(event, index)}>
+                                                {audio.title}
+                                                {/* Add a blue check icon if the index == audioIndex */}
+                                                {index === audioIndex && <FontAwesomeIcon icon={faCheck} className={styles.check} />}
+                                            </div>
+                                        </>
+
                                     );
                                 })
                             }

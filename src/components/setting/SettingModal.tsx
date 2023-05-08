@@ -1,12 +1,20 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useAppStore } from '@/store/store';
 import styles from './settingModal.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { Player, createPlayer } from '@/lib/player';
 
 const SettingModal: React.FC = () => {
     const { countDown, idle, time, isOpen, toggleIsOpen, audios, setAudioIndex, audioIndex } = useAppStore();
     const [isHeaderOverlay, setIsHeaderOverlay] = useState(false);
+
+    let player = useRef<Player | null>(null);
+
+    useEffect(() => {
+        player.current = createPlayer();
+        player.current.setTracks(audios);
+    }, [audios]);
 
     const handleScroll = (e: React.UIEvent) => {
         const target = e.target as HTMLElement;
@@ -22,6 +30,7 @@ const SettingModal: React.FC = () => {
     const handleClick = (e: React.MouseEvent, index: number) => {
         e.stopPropagation();
         setAudioIndex(index)
+        player.current?.playTrack(index);
     };
 
     return (

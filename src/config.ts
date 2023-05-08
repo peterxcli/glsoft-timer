@@ -4,8 +4,12 @@ interface Config {
     tracks: Track[];
 }
 
-const config = {
+const config: Config = {
     tracks: [
+        {
+            title: 'Valentine Hearts And Actions',
+            url: "/glsoft-timer/audio/ValentineHeartsAndActions.wav",
+        },
         {
             title: 'The World',
             url: '/glsoft-timer/audio/dio-brando-stand.mp3',

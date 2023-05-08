@@ -14,12 +14,13 @@ const Setting: React.FC = () => {
     };
 
     return (
-        <div className={`${styles.setting}`} onClick={handleClick} >
-            <div className={`${styles['setting-icon']}`}>
+        <div className={`${styles.setting}`}  >
+            <div className={`${styles['setting-icon']}`} onClick={handleClick}>
                 <div className={`${styles['setting-icon-point']} `}></div>
                 <div className={`${styles['setting-icon-pillar']} `}></div>
-                <SettingModal></SettingModal>
+                
             </div>
+            <SettingModal></SettingModal>
         </div>
     );
 };

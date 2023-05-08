@@ -23,10 +23,10 @@ const BigTimer: React.FC = () => {
     }, )
 
     useEffect(() => {
+        if (time == 0) setCountDown(false)
         if (time == 0 || idle) return
         const timer = setInterval(() => {
             incrementTime(countDown ? -timeUnit : timeUnit)
-            if (time == 0) setCountDown(false)
         }, timeUnit);
 
         return () => {

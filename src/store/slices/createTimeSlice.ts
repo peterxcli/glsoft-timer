@@ -18,7 +18,7 @@ export const createTimeSlice: StateCreator<TimeSlice> = (set) => ({
     time: 0,
     idle: true,
     countDown: false,
-    timeUnit: 1000,
+    timeUnit: 20,
     setTime: (time: number) => set({ time: time }),
     incrementTime: (delta: number) => set((state) => ({ time: Math.max(state.time + delta, 0) })),
     toggleCountDown: () => set((state) => ({ countDown: !state.countDown })),

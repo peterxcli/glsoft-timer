@@ -20,7 +20,7 @@
 
         .header {
             display: flex;
-            max-height: 10vh;
+            max-height: 15vh;
             flex-direction: row;
             justify-content: center;
             align-items: center;
@@ -29,11 +29,11 @@
             z-index: 99999;
 
             .close-button {
-                align-self: flex-end;
-                justify-self: flex-end;
+                // align-self: flex-end;
+                // justify-self: flex-end;
                 background-color: transparent;
                 border: none;
-                font-size: 20px;
+                font-size: 24px;
                 font: bold 20px Arial;
                 color: #0073fe;
                 cursor: pointer;
@@ -44,11 +44,10 @@
 
             .title {
                 justify-self: center;
-                position: relative;
+                // position: relative;
                 font-size: 24px;
                 font-weight: bold;
                 color: rgb(255, 255, 255);
-                margin: 0;
             }
         }
 
@@ -57,7 +56,6 @@
             display: flex;
             flex-direction: column;
             width: 100%;
-            
             overflow-y: scroll;
 
             .list-title {
@@ -85,6 +83,98 @@
 
                 .last {
                     padding-bottom: 5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 1200px) {
+    .popup {
+        .content {
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: space-between;
+            .header {
+                .close-button {
+                    font-size: 8rem;
+                }
+
+                .title {
+                    font-size: 8rem;
+                }
+            }
+            .main {
+                // height: 50vh;
+                // justify-items: flex-end;
+                .list-title {
+                    font-size: 6rem;
+                    padding-left: 10rem;
+                }
+
+                .list {
+                    .list-item {
+                        padding: 10rem;
+                        font-size: 6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1157px) and (min-height: 900px) {
+    .popup {
+        .content {
+            .header {
+                .close-button {
+                    font-size: 3rem;
+                }
+
+                .title {
+                    font-size: 3rem;
+                }
+            }
+            .main {
+                .list-title {
+                    font-size: 2rem;
+                    padding-left: 5rem;
+                }
+
+                .list {
+                    .list-item {
+                        padding: 5rem;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) and (min-height: 900px) {
+    .popup {
+        .content {
+            .header {
+                .close-button {
+                    font-size: 40px;
+                }
+
+                .title {
+                    font-size: 40px;
+                }
+            }
+            .main {
+                .list-title {
+                    padding-left: 4rem;
+                    font-size: 2rem;
+                }
+
+                .list {
+                    .list-item {
+                        padding: 4rem;
+                        font-size: 2rem;
+                    }
                 }
             }
         }

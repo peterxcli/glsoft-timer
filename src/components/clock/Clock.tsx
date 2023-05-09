@@ -7,7 +7,7 @@ const Clock: React.FC = () => {
 
     return (
         <div className={`${styles.clock}`} >
-            <div style={{transform: `rotate(${time/5}deg)`, transition: "transform 0s ease-out, background-color 0s linear"}} className={`${styles['clock-icon']}`}>
+            <div style={{transform: `rotate(${time/2.77777778}deg)`, transition: "transform 0s ease-out, background-color 0s linear"}} className={`${styles['clock-icon']}`}>
                 <div className={`${styles['clock-icon-hour']} `}></div>
             </div>
         </div>

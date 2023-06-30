@@ -15,12 +15,12 @@ const Reset: React.FC = () => {
         <div className={`${styles.cross}`} onClick={handleClick} >
             <Image
                 className={`${styles['cross-icon']}` }
-                src="/glsoft-timer/cross-icon.png"
+                src="/cross-icon.png"
                 alt='arrow'
                 fill
                 priority
                 placeholder="blur"
-                blurDataURL="/glsoft-timer/cross-icon.png"
+                blurDataURL="/cross-icon.png"
             />
         </div>
     );

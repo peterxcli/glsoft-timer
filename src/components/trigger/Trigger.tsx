@@ -22,12 +22,12 @@ const Trigger: React.FC = () => {
             <Image
                 className={`arrow-icon ${!countDown ? styles.up : styles.down}` }
                 onClick={handleClick}
-                src="/glsoft-timer/arrow-icon.png"
+                src="/arrow-icon.png"
                 alt='arrow'
                 fill
                 priority
                 placeholder="blur"
-                blurDataURL="/glsoft-timer/arrow-icon.png"
+                blurDataURL="/arrow-icon.png"
             />
             {/* <ArrowDownwardIcon className={`arrow-icon ${isUp ? styles.up : styles.down}`} /> */}
         </div>

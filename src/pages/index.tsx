@@ -19,8 +19,8 @@ export default function Home() {
         <title>Timer</title>
         <meta name="description" content="Timer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/glsoft-timer/favicon.ico" />
-        {/* <link href={`/glsoft-timer/style/${theme}.css`} rel="stylesheet" lang='scss' /> */}
+        <link rel="icon" href="/favicon.ico" />
+        {/* <link href={`/style/${theme}.css`} rel="stylesheet" lang='scss' /> */}
       </Head>
       {/* <main> */}
         <Timer />
